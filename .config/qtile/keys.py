@@ -230,10 +230,10 @@ keys = [
         ),
 
     # Screenshots
-    # Take a screenshot of all outputs and save it into screenshots
+    # Take a screenshot of the currently focused output and save it into screenshots
     Key([], "Print",
         lazy.spawn(home + "/.local/bin/screenshot.sh"),
-        desc='Save the screens of all outputs to the screenshots folder'
+        desc='Save the screens of the currently focused output to the screenshots folder'
         ),
     # Take a screenshot of the selected region
     Key([mod], "Print",
