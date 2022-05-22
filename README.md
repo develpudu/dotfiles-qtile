@@ -62,6 +62,7 @@ The idle management and screen locker currently do not function with Qtile runni
 | ------------------------------------ | ------------------------- |
 | <kbd>CTRL + MOD + r</kbd>            | restart Qtile             |
 | <kbd>CTRL + MOD + q</kbd>            | shutdown Qtile            |
+| <kbd>CTRL + MOD + w</kbd>            | Open window switcher      |
 | <kbd>MOD + w</kbd>                   | kill window               |
 | <kbd>MOD + RETURN</kbd>              | spawn terminal            |
 | <kbd>CTRL + Space</kbd>              | Rofi menu                 |
