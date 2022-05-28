@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Qtile swayidle toggle
+function toggle {
+if pgrep "swayidle" > /dev/null
+then
+	pkill swayidle
+	icon="I"
+	dunstify -r 5556 -u normal "  Swayidle Inactive"
+else
+	swayidle &
+	icon="A"
+	dunstify -r 5556 -u normal "  Swayidle Active"
+fi
+}
+
+case $1 in
+	toggle)
+		toggle
+		;;
+	*)
+		if pgrep "swayidle" > /dev/null
+		then
+			icon=" "
+		else
+			icon=" "
+		fi
+		printf "%s" "$icon"
+		;;
+esac
+

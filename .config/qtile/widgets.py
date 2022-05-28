@@ -55,6 +55,8 @@ primary_widgets = [
         execute='kitty -e paru'
     ),
     widget.Spacer(length=5),
+    widget.GenPollText(update_interval=1, **widget_defaults, func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/statusbar/idleinhibit")).decode(), mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(os.path.expanduser("~/.local/bin/statusbar/idleinhibit toggle"), shell=True)}),
+    widget.Spacer(length=5),
     widget.KeyboardLayout(configured_keyboards=['us', 'gb']),
     widget.Spacer(length=5),
     widget.GenPollText(update_interval=1, **widget_defaults, func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/statusbar/brightnesscontrol")).decode(), mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(os.path.expanduser("~/.local/bin/statusbar/brightnesscontrol down"), shell=True), 'Button3': lambda: qtile.cmd_spawn(os.path.expanduser("~/.local/bin/statusbar/brightnesscontrol up"), shell=True)}),
