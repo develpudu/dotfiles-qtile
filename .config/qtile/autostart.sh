@@ -30,3 +30,9 @@ if cmd_exist dunst ; then
     __start dunst
 fi
 
+# Swayidle daemon
+
+if cmd_exist swayidle ; then
+    __kill swayidle
+    __start swayidle
+fi
