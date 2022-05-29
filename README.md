@@ -38,6 +38,7 @@ The idle management and screen locker currently do not function with Qtile runni
 	- [tagbar](https://github.com/preservim/tagbar)
 	- [nerdtree](https://github.com/preservim/nerdtree)
 	- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+	- [vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
 	- [vim-airline](https://github.com/vim-airline/vim-airline)
 	- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 	- [indentLine](https://github.com/Yggdroot/indentLine)
