@@ -36,6 +36,9 @@ Plug 'preservim/nerdtree'
 " vim-devicons Plugin
 Plug 'ryanoasis/vim-devicons'
 
+" vim-nerdtree-syntax-highlight Plugin
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " vim-airline Plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
