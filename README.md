@@ -7,7 +7,7 @@ Please note that I use the latest Qtile from their GitHub repo using the AUR [Qt
 ## Details
 
 Below is a list of some of the packages that I use for my current setup which consists of two screens. A monitor as screen 0 and the laptop as screen 1.
-The idle management and screen locker currently do not function with Qtile running under Wayland but work to resolve this is currently under way.
+Currently idle management is fully working but screen locker does not yet function with Qtile running under Wayland but work to resolve this is currently under way.
 
 - **Operating System** --- [Archlinux](https://www.archlinux.org/)
 - **AUR Helper** --- [Paru](https://aur.archlinux.org/packages/paru-git/)
