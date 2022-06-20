@@ -4,6 +4,7 @@
 # Justine Smithies
 # Hooks configuration
 
+import asyncio
 import os
 import subprocess
 import time
@@ -19,21 +20,18 @@ def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/autostart.sh'])
 
-# Get the number of connected screens
-
-# @hook.subscribe.screens_reconfigured
+# Reload config on screen changes
 
 
-def get_monitors():
-    xr = qtile.screens
-    result = len(xr) - 1 if len(xr) > 2 else len(xr)
-    if result <= 0:
-        result = 1
-    logger.warning(f"Number of monitors: {result}")
-    return result
-
+@hook.subscribe.screens_reconfigured
+async def outputs_changed():
+    logger.warning("Screens reconfigured")
+    await asyncio.sleep(1)
+    logger.warning("Reloading config...")
+    qtile.cmd_reload_config()
 
 # When application launched automatically focus it's group
+
 
 @hook.subscribe.client_new
 def modify_window(client):
