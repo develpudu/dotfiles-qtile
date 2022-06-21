@@ -189,6 +189,7 @@ keys = [
     # Install updates
     Key([mod, "control"], "u",
         lazy.spawn("kitty -e paru"),
+        lazy.widget["checkupdates"].force_update(),
         desc="Install updates",
         ),
 
