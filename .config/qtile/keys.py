@@ -188,8 +188,7 @@ keys = [
         ),
     # Install updates
     Key([mod, "control"], "u",
-        lazy.spawn("kitty -e paru"),
-        lazy.widget["checkupdates"].force_update(),
+        lazy.spawn(home + "/.local/bin/statusbar/arch-updates.sh key-update"),
         desc="Install updates",
         ),
 
