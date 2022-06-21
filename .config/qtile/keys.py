@@ -186,6 +186,11 @@ keys = [
         lazy.spawn(home + "/.local/bin/qtile-window-switcher.py"),
         desc="Launch the Window Switcher",
         ),
+    # Install updates
+    Key([mod, "control"], "u",
+        lazy.spawn("kitty -e paru"),
+        desc="Install updates",
+        ),
 
     # Cycle through windows in the floating layout
     Key([mod, "shift"], "i",
