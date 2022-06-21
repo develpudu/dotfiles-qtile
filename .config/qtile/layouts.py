@@ -8,14 +8,14 @@ from libqtile.config import Match
 from colors import *
 
 # DEFAULT THEME SETTINGS FOR LAYOUTS #
-layout_theme = {"border_width": 3,
+layout_theme = {"border_width": 2,
                 "margin": 16,
                 "border_focus": colors[4],
                 "border_normal": colors[0]
                 }
 
 layouts = [
-    layout.MonadTall(**layout_theme, single_border_width=0),
+    layout.MonadTall(**layout_theme, single_border_width=2),
     layout.Stack(num_stacks=2, **layout_theme),
     # layout.Max(),
     # Try more layouts by unleashing below layouts.
