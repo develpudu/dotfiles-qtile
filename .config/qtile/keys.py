@@ -12,7 +12,11 @@ terminal = 'kitty'
 mod = "mod4"
 
 keys = [
-
+    # Move focus to next screen
+    Key([mod, "control"], "period",
+        lazy.next_screen(),
+        desc="Move focus to next screen",
+        ),
     Key([mod], "g",
         lazy.screen.next_group(skip_empty=True),
         desc="Move to next active group"
