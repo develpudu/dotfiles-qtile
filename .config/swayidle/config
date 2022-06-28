@@ -1,2 +1,3 @@
+timeout 5 "qtile cmd-obj -o core -f hide_cursor" resume "qtile cmd-obj -o core -f unhide_cursor"
 timeout 600 "wlopm --off \*" resume "wlopm --on \*"
 
