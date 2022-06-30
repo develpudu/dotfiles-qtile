@@ -57,9 +57,6 @@ esac
 command -v bat > /dev/null && alias cat='bat --paging=never' 
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 
-# Update all user installed Python packages
-alias pip-upgrade="pip freeze --user | cut -d'=' -f1 | xargs -n1 pip install -U"
-
 # Use bat as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
