@@ -36,9 +36,6 @@ Plug 'preservim/nerdtree'
 " vim-devicons Plugin
 Plug 'ryanoasis/vim-devicons'
 
-" vim-nerdtree-syntax-highlight Plugin
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 " vim-airline Plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -73,7 +70,6 @@ call plug#end()
 " Basic
 set encoding=utf-8                                  " Set encoding to utf-8
 set number                                          " Show line numbers on the sidebar
-nnoremap <F4> :set number!<CR>                      " Toggle line numbers
 set clipboard=unnamedplus                           " Copy paste between vim and everything else
 set nocompatible                                    " Use Vim defaults (much better!)
 set hlsearch                                        " Highlight search results
@@ -131,11 +127,11 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
+            \ { 'a': '~/.config/qtile/autostart.sh' },
             \ { 'b': '~/.bashrc' },
+            \ { 'c': '~/.config/qtile/config.py' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'p': '~/.config/qutebrowser/config.py' },
-            \ { 'c': '~/.config/qtile/config.py' },
-            \ { 'a': '~/.config/qtile/autostart.sh' },
             \ ]
 
 " Close NERDTRee before saving session
@@ -207,6 +203,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-json',
     \ 'coc-phpls',
+    \ 'coc-sh',
     \ 'coc-pyright',
     \]
 

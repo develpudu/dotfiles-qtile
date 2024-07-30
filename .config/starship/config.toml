@@ -86,19 +86,11 @@ symbol = " "
 always_show_remote = false
 format = "[on $symbol$branch]($style) "
 style = "purple bold"
+truncation_length = "2^63 - 1"
+truncation_symbol = "…"
 only_attached = false
 disabled = false
 
-[git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-up_to_date = "[✓](green)"
-untracked = "($count) Untracked files "
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
-
+# Replace the "❯" symbol in the prompt with "➜"
+# [character]                            # The name of the module we are configuring is "character"
+# success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"

@@ -1,7 +1,6 @@
 configuration {
-	modi: "drun";
+	modi: "drun,window";
 	font: "FiraCode Nerd Font 10";
-	display-drun:    "Applications";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -33,7 +32,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modi: "drun";
+	combi-modi: "drun,window";
 	matching: "fuzzy";
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -43,7 +42,7 @@ configuration {
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-/*  theme: "~/.config/rofi/themes/jms-theme.rasi";*/
+	theme: "~/.config/rofi/themes/jms-theme.rasi";
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/
@@ -146,4 +145,3 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/themes/jms-theme.rasi"

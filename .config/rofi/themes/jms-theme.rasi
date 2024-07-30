@@ -1,3 +1,10 @@
+configuration {
+	display-drun:   "Apps";
+	display-window: "Window";
+	show-icons:     true;
+	sidebar-mode:   true;
+}
+
 * {
 	background-color: #00000050;
 	text-color:       #EFEFEF;
@@ -25,11 +32,11 @@ mainbox {
   spacing: 0px;
   padding: 0px 0;
   border: 1px;
-  border-color: #EFEFEF50;
+  border-color: @base0D;
 }
 
 button {
-	padding: 8px 2px 8px 0ch;
+	padding: 8px 2px 8px 9ch;
 }
 
 button selected {
@@ -39,7 +46,7 @@ button selected {
 
 inputbar {
 	padding: 5px;
-	spacing: 5px;
+	spacing: 5px;	
 }
 
 listview {

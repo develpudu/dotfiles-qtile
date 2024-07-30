@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Supress error codes to stop issues with CheckUpdates widget
-#checkupdates 2> /dev/null
-#paru -Qua 2> /dev/null
-#exit 0
+if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
+    updates_arch=0
+fi
 
-case $1 in
-  key-update)
-		kitty -e paru
-		qtile cmd-obj -o widget checkupdates -f force_update
-    ;;
-  *)
-		# Supress error codes to stop issues with CheckUpdates widget
-		checkupdates 2> /dev/null
-		paru -Qua 2> /dev/null
-		exit 0
-    ;;
-esac
+if ! updates_aur=$(paru -Qum 2> /dev/null | wc -l); then
+    updates_aur=0
+fi
+
+updates=$((updates_arch + updates_aur))
+
+if [ "$updates" -gt 0 ]; then
+    echo -e "%{F#55aa55}%{F-} $updates"
+else
+    echo ""
+fi

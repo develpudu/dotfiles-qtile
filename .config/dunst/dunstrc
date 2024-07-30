@@ -52,7 +52,7 @@
     # Respectively the horizontal and vertical offset in pixels from the corner of the
     # screen specified by origin. Both values should always be positive or zero.
     # Examples: origin = top-right offset = 10x300 # a margin of 10 pixels from the right and 300 pixels from the top
-    offset = 15x50
+    offset = 14x50
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -64,12 +64,12 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 25
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    # notification_height = 0
+    notification_height = 0
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -229,7 +229,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    #startup_notification = false
+    startup_notification = false
 
     # Manage dunst's desire for talking
     # Can be one of the following values:
@@ -238,7 +238,7 @@
     #  mesg: Important Messages
     #  info: all unimportant stuff
     # debug: all less than unimportant stuff
-    #verbosity = mesg
+    verbosity = mesg
 
     # Define the corner radius of the notification window
     # in pixel size. If the radius is 0, you have no rounded
@@ -290,24 +290,46 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
+[shortcuts]
+
+    # Shortcuts are specified as [modifier+][modifier+]...key
+    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
+    # "mod3" and "mod4" (windows-key).
+    # Xev might be helpful to find names for keys.
+
+    # Close notification.
+    close = ctrl+space
+
+    # Close all notifications.
+    close_all = ctrl+shift+space
+
+    # Redisplay last message(s).
+    # On the US keyboard layout "grave" is normally above TAB and left
+    # of "1". Make sure this key actually exists on your keyboard layout,
+    # e.g. check output of 'xmodmap -pke'
+    history = ctrl+grave
+
+    # Context menu.
+    context = ctrl+shift+period
+
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#000000DD"
+    background = "#000000"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#000000DD"
+    background = "#000000"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#900000DD"
+    background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
     timeout = 0
